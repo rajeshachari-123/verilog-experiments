@@ -1,0 +1,6 @@
+*.bak
+vsim.wlf
+work/
+*.mpf
+*.cr.mti
+wave.do
