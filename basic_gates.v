@@ -1,7 +1,6 @@
 // BASIC_GATES 
 module basic_gates(
-       input a,
-       input b,
+       input a,b,
        output and_out,
        output or_out,
        output not_out,
@@ -10,12 +9,12 @@ module basic_gates(
        output xor_out,
        output xnor_out
 );
-assign and_out  = (a&b);
-assign or_out   = (a|b);
-assign not_out  = ~a;
-assign nand_out = ~(a&b);
-assign nor_out  = ~(a|b);
-assign xor_out  = (a^b);
-assign xnor_out = ~(a^b);
+assign and_out  = (a&b);  // AND OPERATION
+assign or_out   = (a|b);  // OR OPERATION
+assign not_out  = ~a;     // NOT OPERATION
+assign nand_out = ~(a&b); // NAND OPERATION
+assign nor_out  = ~(a|b); // NOR OPERATION
+assign xor_out  = (a^b);  // XOR OPERATION
+assign xnor_out = ~(a^b); // XNOR OPERATION
 endmodule
 
