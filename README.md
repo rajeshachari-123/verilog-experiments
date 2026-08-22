@@ -1,6 +1,6 @@
 Verilog Experiments
 
-This repository contains my Verilog HDL experiments, RTL designs, testbenches, and simulation waveforms.
+This repository contains my Verilog HDL experiments, testbenches, and simulation waveforms.
 
 Topics Covered
 
