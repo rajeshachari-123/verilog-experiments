@@ -1,0 +1,32 @@
+// DESIGN CODE FOR 8 BIT ALU
+module alu_8_bit(
+// INNPUTS AND OUTPUTS DECLARATION
+                input [7:0]a,[7:0]b,    // A and B ARE TWO 8-BIT  INPUTS
+                input [3:0]op_code,     // OP_CODE IT IS USED TO SELECT WHICH OPERATION IS GOING TO DO
+                output reg [7:0]alu_out  // ALU_OUT 8-BIT ALU OUTPUT
+);
+reg temp_carry;                         // IT IS USED TO CARRY BIT 
+reg temp_barrow;                         // IT IS USED TO BARROW BIT
+always @ (*) begin
+case(op_code)
+// OPERATION SELECTION
+         4'b0000 : { temp_carry , alu_out} = a + b ;   // ADDITION OPERATION
+         4'b0001 : {temp_barrow , alu_out = a - b ;   // SUBTRACTION OPERATION
+         4'b0010 : alu_out = a + 1 ;   // INCREMENT A
+         4'b0011 : alu_out = a - 1 ;   // DECREMENT A
+         4'b0100 : alu_out = a & b ;   // AND OPERATION
+         4'b0101 : alu_out = a | b ;   // OR OPERATION
+         4'b0110 : alu_out =  ~a   ;   // NOT OPERATION
+         4'b0111 : alu_out = a ^ b ;   // XOR OPERATION
+         4'b1000 : alu_out = ~(a ^ b) ; // XNOR OPERATION
+         4'b1001 : alu_out = a << b ;   // LEFT SHIFT
+         4'b1010 : alu_out = a >> b ;   // RIGHT SHIFT
+         4'b1011 : alu_out = a == b ;   // EQUALITY OPERATION
+         4'b1100 : alu_out = a > b ;    // GREATER THAN OPERATION
+         4'b1101 : alu_out = a < b ;    // LESS THAN OPERATION 
+         4'b1110 : alu_out = a & ~b ;   // AND OPERATION WITH INVERTING B
+         4'b1111 : alu_out = a | ~b ;   // OR OPERATION WITH INVERTING B
+         default : alu_out = a + b ;    // DEFAULT CONDITION
+endcase
+end
+endmodule

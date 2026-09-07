@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="alu_8bit.v" path="C:\Users\rl962\OneDrive\Desktop\verilog-experiments\03_project\8bit_alu\rtl_code\alu_8bit.v"/>
+    <originFiles name="alu_8bit.v" path="C:\Users\rl962\OneDrive\Desktop\verilog-experiments\03_project\8bit_alu\rtl_code\alu_8bit.v"/>
+  </source>
+  <testbench>
+    <originFiles name="tb_alu_8bit.v" path="C:\Users\rl962\OneDrive\Desktop\verilog-experiments\03_project\8bit_alu\tb_code\tb_alu_8bit.v"/>
+    <originFiles name="tb_alu_8bit.v" path="C:\Users\rl962\OneDrive\Desktop\verilog-experiments\03_project\8bit_alu\tb_code\tb_alu_8bit.v"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
